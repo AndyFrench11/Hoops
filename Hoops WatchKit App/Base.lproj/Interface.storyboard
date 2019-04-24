@@ -1,16 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14256" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch44" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14243"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14219"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Hoops_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="Player 1" id="Z9A-ay-Br4"/>
+                        <group width="1" height="0.25" alignment="left" id="ovL-vz-dP7">
+                            <items>
+                                <button width="0.20000000000000001" height="1" alignment="left" title="+" id="BrS-zl-SUf">
+                                    <fontDescription key="font" type="system" pointSize="15"/>
+                                    <connections>
+                                        <action selector="score1AddAction" destination="AgC-eL-Hgc" id="OHm-a6-FrL"/>
+                                    </connections>
+                                </button>
+                                <label width="0.59999999999999998" height="46" alignment="center" text="Score 1" textAlignment="center" baselineAdjustment="alignCenters" id="WRa-Hc-pww">
+                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                </label>
+                                <button width="0.20000000000000001" height="1" alignment="right" title="-" id="jez-aB-y30">
+                                    <fontDescription key="font" type="system" pointSize="15"/>
+                                    <connections>
+                                        <action selector="score1MinusAction" destination="AgC-eL-Hgc" id="iHz-Z4-UD5"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <label alignment="center" text="Player 2" id="lBd-4v-qRd"/>
+                        <group width="1" height="0.25" alignment="left" id="pZ4-fs-Np8">
+                            <items>
+                                <button width="0.20000000000000001" height="1" alignment="left" title="+" id="9mg-Jk-UbW">
+                                    <fontDescription key="font" type="system" pointSize="15"/>
+                                    <connections>
+                                        <action selector="score2AddAction" destination="AgC-eL-Hgc" id="3Fe-hE-cYr"/>
+                                    </connections>
+                                </button>
+                                <label width="0.59999999999999998" height="46" alignment="center" text="Score 2" textAlignment="center" baselineAdjustment="alignCenters" id="Laz-uj-Tuq">
+                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                </label>
+                                <button width="0.20000000000000001" height="1" alignment="right" title="-" id="Ctv-to-sNC">
+                                    <fontDescription key="font" type="system" pointSize="15"/>
+                                    <connections>
+                                        <action selector="score2MinusAction" destination="AgC-eL-Hgc" id="B2H-WB-WGK"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="player1NameLabel" destination="Z9A-ay-Br4" id="wqu-MC-xKV"/>
+                        <outlet property="player2NameLabel" destination="lBd-4v-qRd" id="leF-nJ-MT7"/>
+                        <outlet property="score1AddButton" destination="BrS-zl-SUf" id="Usr-Lz-80g"/>
+                        <outlet property="score1Label" destination="WRa-Hc-pww" id="nZ7-yq-GfT"/>
+                        <outlet property="score1MinusButton" destination="jez-aB-y30" id="WWh-hB-Qr2"/>
+                        <outlet property="score2AddButton" destination="9mg-Jk-UbW" id="wLC-yZ-A7R"/>
+                        <outlet property="score2Label" destination="Laz-uj-Tuq" id="1am-nZ-cEU"/>
+                        <outlet property="score2MinusButton" destination="Ctv-to-sNC" id="4yN-F2-2S6"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="219.52173913043478" y="344.17410714285717"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -32,14 +89,14 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Hoops_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="Hoops_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="345"/>
         </scene>
