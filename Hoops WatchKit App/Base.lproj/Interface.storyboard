@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch44" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15400" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch44"/>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15400"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -14,19 +12,21 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Hoops_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="center" text="Player 1" id="Z9A-ay-Br4"/>
-                        <group width="1" height="0.25" alignment="left" id="ovL-vz-dP7">
+                        <label height="0.10000000000000001" alignment="center" text="Player 1" id="Z9A-ay-Br4"/>
+                        <group width="1" height="0.29999999999999999" alignment="left" id="ovL-vz-dP7">
                             <items>
-                                <button width="0.20000000000000001" height="1" alignment="left" title="+" id="BrS-zl-SUf">
+                                <label width="80" height="1" alignment="center" text="Score 1" textAlignment="center" baselineAdjustment="alignCenters" id="WRa-Hc-pww">
+                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                </label>
+                                <button width="50" height="1" alignment="right" backgroundImage="plus.circle.fill" catalog="system" id="BrS-zl-SUf">
+                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" pointSize="15"/>
                                     <connections>
                                         <action selector="score1AddAction" destination="AgC-eL-Hgc" id="OHm-a6-FrL"/>
                                     </connections>
                                 </button>
-                                <label width="0.59999999999999998" height="46" alignment="center" text="Score 1" textAlignment="center" baselineAdjustment="alignCenters" id="WRa-Hc-pww">
-                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
-                                </label>
-                                <button width="0.20000000000000001" height="1" alignment="right" title="-" id="jez-aB-y30">
+                                <button width="50" height="1" alignment="left" backgroundImage="minus.circle.fill" catalog="system" id="jez-aB-y30">
+                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" pointSize="15"/>
                                     <connections>
                                         <action selector="score1MinusAction" destination="AgC-eL-Hgc" id="iHz-Z4-UD5"/>
@@ -34,19 +34,21 @@
                                 </button>
                             </items>
                         </group>
-                        <label alignment="center" text="Player 2" id="lBd-4v-qRd"/>
-                        <group width="1" height="0.25" alignment="left" id="pZ4-fs-Np8">
+                        <label height="0.10000000000000001" alignment="center" text="Player 2" id="lBd-4v-qRd"/>
+                        <group width="1" height="0.29999999999999999" alignment="left" id="pZ4-fs-Np8">
                             <items>
-                                <button width="0.20000000000000001" height="1" alignment="left" title="+" id="9mg-Jk-UbW">
+                                <button width="50" height="1" alignment="right" backgroundImage="plus.circle.fill" catalog="system" id="9mg-Jk-UbW">
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" pointSize="15"/>
                                     <connections>
                                         <action selector="score2AddAction" destination="AgC-eL-Hgc" id="3Fe-hE-cYr"/>
                                     </connections>
                                 </button>
-                                <label width="0.59999999999999998" height="46" alignment="center" text="Score 2" textAlignment="center" baselineAdjustment="alignCenters" id="Laz-uj-Tuq">
+                                <label width="80" height="1" alignment="center" text="Score 2" textAlignment="center" baselineAdjustment="alignCenters" id="Laz-uj-Tuq">
                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                 </label>
-                                <button width="0.20000000000000001" height="1" alignment="right" title="-" id="Ctv-to-sNC">
+                                <button width="50" height="1" alignment="left" backgroundImage="minus.circle.fill" catalog="system" id="Ctv-to-sNC">
+                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="font" type="system" pointSize="15"/>
                                     <connections>
                                         <action selector="score2MinusAction" destination="AgC-eL-Hgc" id="B2H-WB-WGK"/>
@@ -54,6 +56,10 @@
                                 </button>
                             </items>
                         </group>
+                        <button width="1" height="0.20000000000000001" alignment="left" title="Finish! 🏀" id="8Cx-Ww-NdU">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="player1NameLabel" destination="Z9A-ay-Br4" id="wqu-MC-xKV"/>
@@ -67,7 +73,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="219.52173913043478" y="344.17410714285717"/>
+            <point key="canvasLocation" x="219.52173913043478" y="343.79464285714289"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -101,4 +107,8 @@
             <point key="canvasLocation" x="468" y="345"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="minus.circle.fill" catalog="system" width="64" height="62"/>
+        <image name="plus.circle.fill" catalog="system" width="64" height="62"/>
+    </resources>
 </document>
