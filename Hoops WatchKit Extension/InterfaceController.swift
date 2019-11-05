@@ -12,8 +12,6 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
     
-    
-    
     @IBOutlet weak var player1NameLabel: WKInterfaceLabel!
     @IBOutlet weak var score1AddButton: WKInterfaceButton!
     @IBOutlet weak var score1MinusButton: WKInterfaceButton!
@@ -55,7 +53,6 @@ class InterfaceController: WKInterfaceController {
         score1Label.setTextColor(UIColor.green)
         score2Label.setText(String(score2Value))
         score2Label.setTextColor(UIColor.red)
-        
         
     }
     
